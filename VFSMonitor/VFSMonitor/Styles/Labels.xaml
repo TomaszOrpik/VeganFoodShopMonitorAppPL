@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <Style TargetType="Label" x:Key="PageTitle">
+        <Setter Property="VerticalOptions" Value="Center"/>
+        <Setter Property="HorizontalOptions" Value="Center"/>
+        <Setter Property="FontSize" Value="24"/>
+        <Setter Property="FontAttributes" Value="Bold"/>
+        <Setter Property="TextColor" Value="Green"/>
+    </Style>
+    <Style TargetType="Label" x:Key="AverageKeyStyle">
+        <Setter Property="TextColor" Value="Green"/>
+        <Setter Property="VerticalTextAlignment" Value="Center"/>
+    </Style>
+    <Style TargetType="Label" x:Key="AverageValueStyle">
+        <Setter Property="TextColor" Value="Black"/>
+        <Setter Property="VerticalTextAlignment" Value="Center"/>
+        <Setter Property="HorizontalOptions" Value="EndAndExpand"/>
+    </Style>
+    <Style TargetType="Label" x:Key="SmallTitleStayle">
+        <Setter Property="HorizontalOptions" Value="Center"/>
+        <Setter Property="TextColor" Value="Green"/>
+    </Style>
+</ResourceDictionary>

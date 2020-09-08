@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:forms="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
+             mc:Ignorable="d"
+             x:Class="VFSMonitor.Views.DetailsPage"
+             Title="SZCZEGÓŁY SESJI">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Style="{StaticResource PageMaster}">
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Id Użytkownika" Style="{StaticResource AverageKeyStyle}"/>
+                    <Label Text="{Binding userId}" Style="{StaticResource AverageValueStyle}"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Id Sesji" Style="{StaticResource AverageKeyStyle}"/>
+                    <Label Text="{Binding sessionId}" Style="{StaticResource AverageValueStyle}"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Ip Użytkownika" Style="{StaticResource AverageKeyStyle}"/>
+                    <Label Text="{Binding userIp}" Style="{StaticResource AverageValueStyle}"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Data Wizyty" Style="{StaticResource AverageKeyStyle}"/>
+                    <Label Text="{Binding visitDate}" Style="{StaticResource AverageValueStyle}"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Urządzenie" Style="{StaticResource AverageKeyStyle}"/>
+                    <Label Text="{Binding device}" Style="{StaticResource AverageValueStyle}"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Przeglądarka" Style="{StaticResource AverageKeyStyle}"/>
+                    <Label Text="{Binding browser}" Style="{StaticResource AverageValueStyle}"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Lokacja" Style="{StaticResource AverageKeyStyle}"/>
+                    <Label Text="{Binding location}" Style="{StaticResource AverageValueStyle}"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Polecenie" Style="{StaticResource AverageKeyStyle}"/>
+                    <Label Text="{Binding reffer}" Style="{StaticResource AverageValueStyle}"/>
+                </StackLayout>
+                <StackLayout>
+                    <Label Text="Czas na Stronach" Style="{StaticResource SmallTitleStayle}"/>
+                    <forms:ChartView x:Name="PagesChart" HeightRequest="150" BackgroundColor="Transparent"/>
+                </StackLayout>
+                <StackLayout x:Name="listStack">
+                    <Label Text="Przedmioty Dodane do Koszyka" Style="{StaticResource SmallTitleStayle}"/>
+                    <ListView ItemsSource="{Binding cartItems}" SeparatorColor="Green" SelectionMode="None">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <TextCell Text="{Binding ItemName}" Detail="{Binding ItemAction}" TextColor="Green"/>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+                <StackLayout>
+                    <Label Text="Kupione Przedmioty" Style="{StaticResource SmallTitleStayle}"/>
+                    <forms:ChartView x:Name="BuyedChart" HeightRequest="150" BackgroundColor="Transparent" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Czy Zalogowany" Style="{StaticResource AverageKeyStyle}"/>
+                    <CheckBox IsChecked="{Binding didLogged}" IsEnabled="False" Color="Black" HorizontalOptions="EndAndExpand"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Czy się Kontaktował" Style="{StaticResource AverageKeyStyle}"/>
+                    <CheckBox IsChecked="{Binding didContacted}" IsEnabled="False" Color="Black" HorizontalOptions="EndAndExpand"/>
+                </StackLayout>
+                <Button Text="Eksportuj jako Excel" Style="{StaticResource ButtonStyle}" HorizontalOptions="FillAndExpand" VerticalOptions="End" Clicked="Export_Clicked"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

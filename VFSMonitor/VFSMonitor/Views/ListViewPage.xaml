@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="VFSMonitor.Views.ListViewPage"
+             Title="{Binding Title}"
+             BackgroundColor="White"
+             Padding="20, 20, 20, 20">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid>
+                <ListView x:Name="sessionsList" ItemsSource="{Binding SessionsList}" ItemTapped="ListView_ItemTapped" SeparatorColor="Green" SelectionMode="None">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextCell Text="{Binding SessionId}" TextColor="Green"/>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <ActivityIndicator IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}" HorizontalOptions="Center" VerticalOptions="Center" Color="Green"/>
+            </Grid>
+            <Button Text="Średnie Dane Użytkowników" Style="{StaticResource ButtonStyle}" IsVisible="{Binding BtnVisible}" HorizontalOptions="FillAndExpand" VerticalOptions="End" Clicked="Average_Clicked"/>
+            <Button Text="Eksportuj jako CSV" Style="{StaticResource ButtonStyle}" HorizontalOptions="FillAndExpand" VerticalOptions="End" Clicked="Export_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

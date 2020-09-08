@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="VFSMonitor.Views.UsersListView"
+             Title="UŻYTKOWNICY">
+    <ContentPage.Content>
+        <Grid>
+            <ListView ItemTapped="sessionsList_ItemTapped" ItemsSource="{Binding UniqueUserSessionsList}" SeparatorColor="Green" SelectionMode="None" BackgroundColor="White">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding UserId}" TextColor="Green"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <ActivityIndicator IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}" HorizontalOptions="Center" VerticalOptions="Center" Color="Green"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
