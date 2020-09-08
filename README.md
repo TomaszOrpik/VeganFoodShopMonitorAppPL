@@ -37,11 +37,11 @@ Główna funkcjonalność aplikacji:
 * Pobieranie danych o sesjach, użytkownikach i globalnych, jako plik Excel
 
 <kbd><img src="https://user-images.githubusercontent.com/54088860/92420325-fe1b7700-f172-11ea-8759-b8e0ef35b414.jpg" width="250"></kbd>
-<kbd><img src="https://user-images.githubusercontent.com/54088860/92420346-1d1a0900-f173-11ea-950b-0e15fd4f5dfc.jpg" width="250"></kbd>
-<kbd><img src="https://user-images.githubusercontent.com/54088860/92420555-5a32cb00-f174-11ea-8d33-6b6e37c8d402.jpg" width="250"></kbd>
-<kbd><img src="https://user-images.githubusercontent.com/54088860/92420367-3b800480-f173-11ea-994a-dcfe831e2a89.jpg" width="250"></kbd>
-<kbd><img src="https://user-images.githubusercontent.com/54088860/92420563-661e8d00-f174-11ea-9aae-8e307b53581e.jpg" width="250"></kbd>
-<kbd><img src="https://user-images.githubusercontent.com/54088860/92420570-70d92200-f174-11ea-9148-abea465b7c75.jpg" width="250"></kbd>
+<kbd><img src="https://user-images.githubusercontent.com/54088860/92429623-d3411b00-f192-11ea-8a45-f66c3f71c1d4.jpg" width="250"></kbd>
+<kbd><img src="https://user-images.githubusercontent.com/54088860/92429642-de944680-f192-11ea-99fa-0facadf86828.jpg" width="250"></kbd>
+<kbd><img src="https://user-images.githubusercontent.com/54088860/92429684-fbc91500-f192-11ea-8b22-fec18aff3646.jpg" width="250"></kbd>
+<kbd><img src="https://user-images.githubusercontent.com/54088860/92429692-01265f80-f193-11ea-94e3-6836ea0d899a.jpg" width="250"></kbd>
+<kbd><img src="https://user-images.githubusercontent.com/54088860/92429701-0b485e00-f193-11ea-860d-99d5969e9cda.jpg" width="250"></kbd>
 
 
 # Inne
